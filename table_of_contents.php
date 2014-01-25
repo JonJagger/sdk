@@ -12,6 +12,28 @@ require_once('redirect.inc');
 $titles = EntryTable::get_just_titles();
 sort($titles);
 
+$alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+for ($i = 0; $i < strlen($alphabet); $i++)
+{
+   $c = $alphabet[$i];
+   $count[$c] = 0;
+}
+
+foreach ($titles as $title_row)
+{
+   $title = $title_row[0];
+   $ic = $title[0]; #initial_character
+   $count[$ic]++;
+}
+
+foreach ($count as $key => $value)
+{
+   if ($value != 0)
+       $az .= ' <a href="#' . $key . '">' . $key . '</a>';
+   else
+       $az .= ' ' . $key;
+}
+
 $list = "<ul>";
 foreach ($titles as $title_row)
 {
@@ -20,7 +42,6 @@ foreach ($titles as $title_row)
    $list .= "<li>" . $link . "</li>";
 }
 $list .= "</ul>";
-
 
 $page = html_header('A-Z')
       . "<body>"
