@@ -1,0 +1,93 @@
+
+body
+{
+    font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    text-align: left;
+    background-color: #CCFFFF;
+    color: Black;
+    margin: 3em;
+}
+
+div.preview-banner
+{
+    font-size: 55px;
+    color: Green;
+}
+
+div.preview-box
+{
+    background-color: white;
+    margin: 1em;
+    padding: 1em;
+    border-width: 0.1em;
+    border-style: solid;
+    border-color: Green;
+}
+
+div.edit-box
+{
+    background-color: white;
+    margin: 1em;
+    padding: 1em;
+    border-width: 0.1em;
+    border-style: solid;
+    border-color: Gray;
+}
+
+div.box
+{    
+    margin: 1em;
+    padding: 0em 1em 1em 1em;
+    border-width: 0.1em;
+    border-style: solid;
+    border-color: Gray;
+}
+
+div.sep
+{
+    margin: 1em;
+    padding: 1em;
+    background-color: #99FFCC;
+}
+
+pre.code
+{
+    font-size: 1.2em;
+    background-color: #FFFF99;
+    font-weight: bold;
+    padding: 0.5em;
+}
+
+div.quote
+{
+    background-color: moccasin;
+    border: 1em;
+    margin: 1em;
+    padding: 1em;
+    margin-bottom: 2em;
+}
+
+.quote-info
+{
+    float: right;
+    font-style: italic;
+}
+
+.button
+{
+    float: right;
+}
+
+.post-it
+{
+    float: left;
+    display: inline-block;
+    width: 12em;
+    background-color: yellow;
+    border-width: 0.1em;
+    border-style: solid;
+    border-color: Gray;
+    margin: 1em;
+    padding: 0em 1em 1em 1em;
+}
