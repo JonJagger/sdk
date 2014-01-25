@@ -26,14 +26,6 @@ foreach ($titles as $title_row)
    $count[$ic]++;
 }
 
-foreach ($count as $key => $value)
-{
-   if ($value != 0)
-       $az .= ' <a href="#' . $key . '">' . $key . '</a>';
-   else
-       $az .= ' ' . $key;
-}
-
 $list = "<ul>";
 foreach ($titles as $title_row)
 {
