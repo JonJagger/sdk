@@ -12,20 +12,6 @@ require_once('redirect.inc');
 $titles = EntryTable::get_just_titles();
 sort($titles);
 
-$alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-for ($i = 0; $i < strlen($alphabet); $i++)
-{
-   $c = $alphabet[$i];
-   $count[$c] = 0;
-}
-
-foreach ($titles as $title_row)
-{
-   $title = $title_row[0];
-   $ic = $title[0]; #initial_character
-   $count[$ic]++;
-}
-
 $list = "<ul>";
 foreach ($titles as $title_row)
 {
