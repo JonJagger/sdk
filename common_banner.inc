@@ -24,7 +24,7 @@ $banner = <<< BANNER
 $lout
 <h1>$sdk</h1>
 <h2>
-  <a href="table_of_contents.php#title=$title">A-Z</a>
+  <a href="table_of_contents.php#title=$title">A-Za-z</a>
   &nbsp;&nbsp;&nbsp;
   <a href="wordCount.php#title=$title">Word-Counts</a>
   &nbsp;&nbsp;&nbsp;
