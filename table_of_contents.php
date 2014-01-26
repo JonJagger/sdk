@@ -1,3 +1,4 @@
+
 <?php
 session_start();
 
@@ -12,19 +13,33 @@ require_once('redirect.inc');
 $titles = EntryTable::get_just_titles();
 sort($titles);
 
-$list = "<ul>";
+$misc = "<ul>";
+$upper = "<ul>";
+$lower = "<ul>";
+
 foreach ($titles as $title_row)
 {
    $title = $title_row[0];
-   $link = '<a href="view.php?title=' . $title . '">' . $title . '</a>';
-   $list .= "<li>" . $link . "</li>";
+   $link = '<li><a href="view.php?title=' . $title . '">' . $title . '</a></li>';
+   if (strstr("ABCDEFGHIJKLMNOPQRSTUVWXYZ",$title[0]))
+      $upper .= $link;
+   else if (strstr("abcdefghijklmnopqrstuvwxyz",$title[0]))
+      $lower .= $link;
+   else
+      $misc .= $link;
 }
-$list .= "</ul>";
+$misc .= "</ul>";
+$upper .= "</ul>";
+$lower .= "</ul>";
 
 $page = html_header('A-Z')
       . "<body>"
       . common_banner('')
-      . $list
+      . "<table><tr>" 
+      . "<td>" . $upper . "</td>"
+      . "<td>" . $lower . "</td>"
+      . "<td>" . $misc . "</td>"
+      . "</tr></table>"
       . '</body></html>';
 
 if (is_authenticated())
