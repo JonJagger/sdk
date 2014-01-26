@@ -35,7 +35,7 @@ $lower .= "</ul>";
 $page = html_header('A-Z')
       . "<body>"
       . common_banner('')
-      . "<table><tr>" 
+      . "<table><tr valign='top'>" 
       . "<td>" . $upper . "</td>"
       . "<td>" . $lower . "</td>"
       . "<td>" . $misc . "</td>"
