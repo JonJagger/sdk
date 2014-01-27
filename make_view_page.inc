@@ -26,7 +26,7 @@ function make_view_page($title)
 
 $template = <<< TEMPLATE
 $head
-<body ondblclick="document.location='http://54.246.47.161/edit.php?title=$title';">
+<body ondblclick="document.location='/edit.php?title=$title';">
   $banner
   <form action="view.php?title=$title" method="POST">
     <input type="submit" name="edit" value="Edit"/> (or double-click anywhere on the page)
