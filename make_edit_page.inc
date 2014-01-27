@@ -41,19 +41,19 @@ add a cross-reference hyperlink to an existing title.
 <li>
 The link text defaults to the same as the title attribute.
 </br>
-For example the following hyperlinks to the Abstraction title
- - like this <a href="view.php?title=Abstraction">Abstraction</a>
+For example the following hyperlinks to the abstraction entry
+ - like this <a href="view.php?title=abstraction">abstraction</a>
 <pre style="background-color: white;">
-&lt;xref title="Abstraction"/&gt;
+&lt;xref title="abstraction"/&gt;
 </pre>
 </li>
 <li>
 The link text is explicitly provided by the &lt;xref&gt; text.
 </br>
-For example the following also hyperlinks to the Abstraction title
- - like this <a href="view.php?title=Abstraction">Selective Ignorance</a>
+For example the following also hyperlinks to the abstraction entry
+ - like this <a href="view.php?title=abstraction">selective ignorance</a>
 <pre style="background-color: white;">
-&lt;xref title="Abstraction"&gt;Selective Ignorance&lt;/xref&gt;
+&lt;xref title="abstraction"&gt;selective ignorance&lt;/xref&gt;
 </pre>
 </li>
 </ul>
