@@ -3,7 +3,7 @@
 require_once('session.inc');
 
 $sdk = '<a href="home.php">' .
-       'Software Development Knowledge (A to Z)' .
+       'Software Development Knowledge - SDK' .
        '</a>';
 
 function common_banner($title)
