@@ -14,15 +14,13 @@ $info = <<< INFO
 <h2>XML</h2>
 The entry for each title must take the form:
 <pre style="background-color: white;">
-&lt;entry title="TITLE" status="STATUS"&gt;
+&lt;entry title="TITLE"&gt;
 ...
 &lt;/entry&gt;
 </pre>
 <ul>
 <li>&lt;entry&gt; must be well-formed XML</li>
 <li>The title attribute is required.</li>
-<li>The status attribute is optional and defaults to
-unspecified.</li>
  <li>
 Write <code style="background-color: white;">&amp;amp;</code>
 to get a <code style="background-color: white;">&amp;</code> 
@@ -172,7 +170,7 @@ return $info;
 function make_edit_page($title)
 {
     $entry = EntryTable::get($title);
-    # if brand new entry add outer xml tags and save in database
+    # if brand new entry add outer xml tags
     if ($entry == "")
     {
         $entry = '<entry title="' 
@@ -184,13 +182,8 @@ function make_edit_page($title)
                 . '</p>'
                 . "\r\n"
                 . '</entry>';
-
-        #EntryTable::insert($title, $entry);
     }
     $ts = EntryTable::get_ts($title);
-
-    # until time to save again make html friendly
-    #$entry = htmlspecialchars($entry);
 
     return make_edit_page4($title, "", $entry, $ts);
 }
